@@ -63,8 +63,6 @@ if __name__ == '__main__':
     labels = tqdm.tqdm(labels)
     for idx, label in enumerate(labels):
         x, y, w, h, c, filename = label
-        if c == '0':
-            continue
         x, y, w, h, c = list(map(int, [x, y, w, h, c]))
         x1 = x - w // 2
         y1 = y - h // 2
@@ -74,6 +72,7 @@ if __name__ == '__main__':
             "category_id": c,
             'area': w * h,
             'bbox': [x1, y1, w, h],
+            'iscrowd': 0,
         }
         for image in images:
             if image['filename'] == filename:
