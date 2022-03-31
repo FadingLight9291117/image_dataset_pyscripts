@@ -1,10 +1,15 @@
 python yolo2coco.py \
---coco /media/clz/Work/dataset/WIDER_FACE/annotations/train.json \
---yolo-images /media/clz/Work/dataset/WIDER_FACE/images/train \
---yolo-labels /media/clz/Work/dataset/WIDER_FACE/labels/train
+--coco /media/clz/Work/dataset/VisDrone/annotations/train.json \
+--yolo-images /media/clz/Work/dataset/VisDrone/train/images \
+--yolo-labels /media/clz/Work/dataset/VisDrone/train/labels
 
 
 python yolo2coco.py \
---coco /media/clz/Work/dataset/WIDER_FACE/annotations/val.json \
---yolo-images /media/clz/Work/dataset/WIDER_FACE/images/val \
---yolo-labels /media/clz/Work/dataset/WIDER_FACE/labels/val
+--coco /media/clz/Work/dataset/VisDrone/annotations/test.json \
+--yolo-images /media/clz/Work/dataset/VisDrone/test/images \
+--yolo-labels /media/clz/Work/dataset/VisDrone/test/labels
+
+python yolo2coco.py \
+--coco /media/clz/Work/dataset/VisDrone/annotations/val.json \
+--yolo-images /media/clz/Work/dataset/VisDrone/val/images \
+--yolo-labels /media/clz/Work/dataset/VisDrone/val/labels

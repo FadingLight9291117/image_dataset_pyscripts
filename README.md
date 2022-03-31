@@ -11,3 +11,4 @@
 9. [clear_visDroneLabel_0and11.py](./clear_visDroneLabel_0and11.py) - 清理标签，去除0和11类；
 10. [csv2coco.py](./csv2coco.py) - csv转coco标签, 提起已经使用mmdetection的脚本生成了空annotation的json标签
 11. [test_coco.py](./test_coco.py) - 测试coco数据标签是否正确
+12. [yolo2coco.py](./yolo2coco.py) -  yolo数据集转coco标签
