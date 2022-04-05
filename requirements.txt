@@ -1,2 +1,4 @@
 easydict
-clickpillow
+click
+pillow
+mmcv

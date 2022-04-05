@@ -9,9 +9,9 @@ from PIL import Image
 
 def get_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument( '--yolo-images', type=str,
+    parser.add_argument('--yolo-images', type=str,
                         default='../WIDER_FACE/train', help='yolo数据集文件夹')
-    parser.add_argument( '--yolo-labels', type=str,
+    parser.add_argument('--yolo-labels', type=str,
                         default='../WIDER_FACE/train', help='yolo数据集文件夹')
     parser.add_argument('-c', '--coco', type=str,
                         default='../WIDER_FACE/train/annotations/labels.json', help='coco json file')
@@ -27,6 +27,12 @@ if __name__ == '__main__':
 
     yolo_label_dir = Path(args.yolo_labels)
     yolo_image_dir = Path(args.yolo_images)
+
+    assert (
+        yolo_image_dir.exists() and
+        yolo_image_dir.exists() and
+        json_file.exists()
+    ), "某个文件不存在！！！"
 
     labels = []
     for file in yolo_label_dir.glob('*'):
