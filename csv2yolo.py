@@ -6,6 +6,8 @@ import tqdm
 from PIL import Image
 
 
+# csv: x, y, w, h (全像素), c, filename
+
 def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('-o', '--origin', type=str,

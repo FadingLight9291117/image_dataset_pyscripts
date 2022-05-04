@@ -15,3 +15,4 @@
 - [show_whbox_from_yolo_txt.py](./show_whbox_from_yolo_txt.py) - 展示一个图像的目标检测标签
 - [show_whbox_from_yolo_dir.py](./show_whbox_from_yolo_dir.py) - 展示一个文件夹的目标检测标签
 - [images2coco.py](./images2coco.py) - 生成一个文件夹图片的 coco 标签
+- [split_train_val_test.py](./split_train_val_test.py) - 划分数据集
