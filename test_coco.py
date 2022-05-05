@@ -10,6 +10,7 @@ def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('-l', '--label-path', type=str,
                         default='/media/clz/Work/dataset/VisDrone/train/annotations/label.json', help='label file path')
+    parser.add_argument('-i', '--image-dir', type=str, default='')
     args = parser.parse_args()
     return args
 
@@ -59,7 +60,7 @@ if __name__ == '__main__':
                 image_path = i['file_name']
         
         image_path = Path(image_path)
-        img = Image.open(image_path)
+        img = Image.open(Path(args.image_dir) / image_path)
         img = draw_boxes(img, [[x, y, w, h]])
         
         img.show()
