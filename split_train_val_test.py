@@ -54,6 +54,7 @@ if __name__ == '__main__':
     for img_path in val_img_paths:
         label_path = label_dir / (img_path.stem + '.txt')
         shutil.copy(img_path, val_dir / 'images')
-        shutil.copy(label_path, val_dir / 'labels')
+        if label_path.exists():
+            shutil.copy(label_path, val_dir / 'labels')
         # print(f'copy {img_path.name} and {label_path.name}')
         
