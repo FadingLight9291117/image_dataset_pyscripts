@@ -20,5 +20,5 @@
 
 ## 转coco标签
 - [images2coco.py](./images2coco.py) - 生成一个文件夹图片的 coco 标签
-- [test_coco.py](./test_coco.py) - 测试 coco 数据标签是否正确
 - [yolo2coco.py](./yolo2coco.py) - yolo 数据集转 coco 标签
+- [test_coco.py](./test_coco.py) - 测试 coco 数据标签是否正确

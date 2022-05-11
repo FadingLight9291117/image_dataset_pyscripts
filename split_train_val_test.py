@@ -1,12 +1,9 @@
-from cProfile import label
 import shutil
 from pathlib import Path
 import argparse
 import random
 
 import tqdm
-from argon2 import DEFAULT_RANDOM_SALT_LENGTH
-from pandas import cut
 
 def get_args():
     parser = argparse.ArgumentParser()
@@ -48,7 +45,8 @@ if __name__ == '__main__':
     for img_path in train_img_paths:
         label_path = label_dir / (img_path.stem + '.txt')
         shutil.copy(img_path, train_dir / 'images')
-        shutil.copy(label_path, train_dir / 'labels')
+        if label_path.exists():
+            shutil.copy(label_path, train_dir / 'labels')
         # print(f'copy {img_path.name} and {label_path.name}')
     
     val_img_paths = tqdm.tqdm(val_img_paths)
