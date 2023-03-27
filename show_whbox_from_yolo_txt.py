@@ -25,9 +25,9 @@ def draw1whbox(imgD: ImageDraw.ImageDraw, whbox, imgW, imgH):
     return imgD
 
 
-# @click.command()
-# @click.option('--img-path', type=str, default='...')
-# @click.option('--txt-file', type=str, default='...')
+@click.command()
+@click.option('-i','--img-path', type=str, default='...')
+@click.option('-t','--txt-file', type=str, default='...')
 def show_whbox_from_yolo_txt(img_path, txt_file):
     img_path = Path(img_path)
     txt_file = Path(txt_file)

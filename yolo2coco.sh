@@ -1,4 +1,4 @@
-base_dir=/media/clz/Work/dataset/words/words
+base_dir=/media/clz/Work/dataset/jiankong
 
 python yolo2coco.py \
 --coco ${base_dir}/annotations/train.json \
